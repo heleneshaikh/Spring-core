@@ -24,7 +24,7 @@ public class Customer implements Serializable {
     @Version
     private Integer version;
 
-    @OneToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @OneToOne(mappedBy = "customer",cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     private User user;
 
     @OneToOne

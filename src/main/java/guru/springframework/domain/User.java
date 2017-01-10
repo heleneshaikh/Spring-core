@@ -18,8 +18,8 @@ public class User implements Serializable {
     private String password;
     private String encryptedPassword;
 
-    //bidirectional : user is slave, customer is owner.
-    @OneToOne(mappedBy = "user", cascade = {CascadeType.MERGE, CascadeType.MERGE})
+    //bidirectional : customer is slave, user is owner.
+    @OneToOne(cascade = {CascadeType.MERGE, CascadeType.MERGE})
     private Customer customer;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true) //if user gets deleted, cart gets deleted

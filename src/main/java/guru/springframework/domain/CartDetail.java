@@ -22,6 +22,7 @@ public class CartDetail implements Serializable {
     @OneToOne
     private Product product;
 
+
     public Integer getId() {
         return id;
     }
